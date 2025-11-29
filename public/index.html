@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wishing Well</title>
+</head>
+<body>
+    <div id="landing-screen">
+    <h1>Welcome to the</h1>
+    <button id="enter-btn">Wishing Well</button>
+</div>
+<div id="permission-screen">
+        <p>In order to participate, please allow permissions to your browser's microphone.</p>
+        <button id="make-wish-btn">Make a Wish</button>
+    </div>
+    <div id="wish-screen">
+        <img src="" alt="wishing well">
+        <img src="" alt="fairy">
+        <p>Click on the bucket to record your wish</p>
+       <button id="bucket-btn">Bucket</button>
+       <button id="another-wish-btn" style="display: none;">Make Another Wish</button>
+       <!-- <button id="listen-btn" style="display: none;">Listen to the Well</button> //used this feature to test why audio playback wasnt working automatically..it was safari.. -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ const permissionScreen = document.getElementById("permission-screen");
 const wishScreen = document.getElementById("wish-screen");
 
 //Button Variables//
-const enterBtn = document.getElementById("enter-btn");
+const enterBtn = document.getElementById("enter-btn-img");
 const makeWishBtn = document.getElementById("make-wish-btn");
 const bucketBtn = document.getElementById("bucket-btn");
 const anotherWishBtn = document.getElementById("another-wish-btn");
@@ -22,8 +22,29 @@ wishScreen.style.display = "none";
 
 //click enter to go to permission screen//
 enterBtn.addEventListener("click", function() {
-landingScreen.style.display = "none";
-permissionScreen.style.display = "block";
+    //fade out text first//
+    document.querySelector(".title-welcome").classList.add("animate-fade");
+    document.querySelector(".title-tothe").classList.add("animate-fade");
+    
+    //delay cloud animations until text fades//
+    setTimeout(function() {
+        //add animation classes to each cloud//
+        document.querySelector(".cloud-topleft").classList.add("animate-left");
+        document.querySelector(".cloud-topright").classList.add("animate-right");
+        document.querySelector(".cloud-midleft").classList.add("animate-left");
+        document.querySelector(".cloud-midright").classList.add("animate-right");
+        document.querySelector(".cloud-btmleft").classList.add("animate-left");
+        document.querySelector(".cloud-btmright").classList.add("animate-right");
+        document.querySelector(".cloud-topcenter").classList.add("animate-up");
+        document.querySelector(".cloud-midbtm").classList.add("animate-down");
+        document.querySelector(".cloud-moon").classList.add("animate-fade");
+    }, 1000);
+    
+    //wait for all animations to finish, then switch screens//
+    setTimeout(function() {
+        landingScreen.style.display = "none";
+        permissionScreen.style.display = "block";
+    }, 3000);
 });
 
 //click make wish to go to wish screen//

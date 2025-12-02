@@ -27,17 +27,32 @@
     <!-- <button id="enter-btn">Wishing Well</button> -->
 </div>
 <div id="permission-screen">
-        <p>In order to participate, please allow permissions to your browser's microphone.</p>
-        <button id="make-wish-btn">Make a Wish</button>
+    <img src="assets/permission-screen/wish-forrest-background.jpeg" alt="" class="permission-bg">
+    <img src="assets/permission-screen/tree-topright-curtain.png" alt="" class="tree tree-topright">
+    <img src="assets/permission-screen/tree-midcenter-curtain.png" alt="" class="tree tree-midcenter">
+    <img src="assets/permission-screen/tree-btmleft-curtain.png" alt="" class="tree tree-btmleft">
+    <img src="assets/permission-screen/tree-topleft-curtain.png" alt="" class="tree tree-topleft">
+    <img src="assets/permission-screen/tree-btmright-curtain.png" alt="" class="tree tree-btmright">
+    <img src="assets/permission-screen/tree-btmcenter-curtain.png" alt="" class="tree tree-btmcenter">
+    <div class="sign-container">
+        <img src="assets/permission-screen/permission_sign_floral.png" alt="" class="permission-sign">
+        <button id="make-wish-btn" class="bubble-btn">Make a Wish</button>
     </div>
-    <div id="wish-screen">
-        <img src="" alt="wishing well">
-        <img src="" alt="fairy">
-        <p>Click on the bucket to record your wish</p>
-       <button id="bucket-btn">Bucket</button>
-       <button id="another-wish-btn" style="display: none;">Make Another Wish</button>
-       <!-- <button id="listen-btn" style="display: none;">Listen to the Well</button> //used this feature to test why audio playback wasnt working automatically..it was safari.. -->
+
+    <!-- Wishing Well Assets hidden until permission screen assets exit screen  -->
+    <div class="wish-assets">
+        <img src="assets/wish-screen/wishing-well.png" alt="" class="wish-well">
+        <img src="assets/wish-screen/forrest-rock.png" alt="" class="wish-rock">
+        <img src="assets/wish-screen/wish-coin.png" alt="" class="wish-coin" id="coin-btn">
+        <div class="fairy-sign-container">
+            <img src="assets/wish-screen/fairy_sign_before.png" alt="" class="fairy-sign">
+        </div>
+        <img src="assets/wish-screen/fairy_mushroom_left.png" alt="" class="mushroom mushroom-left">
+        <img src="assets/wish-screen/fairy_mushroom_middle.png" alt="" class="mushroom mushroom-middle">
+        <img src="assets/wish-screen/fairy_mushroom_right.png" alt="" class="mushroom mushroom-right">
     </div>
+</div>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
     <script src="script.js"></script>
 </body>

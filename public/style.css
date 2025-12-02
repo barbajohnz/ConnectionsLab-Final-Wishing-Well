@@ -103,10 +103,6 @@
     display: none;
 }
 
-#wish-screen {
-    display: none;
-}
-
 .title-welcome {
     font-family: "Rubik Bubbles", system-ui;
     position: absolute;
@@ -160,6 +156,120 @@
     }
 }
 
+@keyframes sign-enter {
+    from {
+        bottom: -100%;
+    }
+    to {
+        bottom: 10%;
+    }
+}
+
+@keyframes bubble-pop {
+    0% {
+        transform: translate(-50%, -50%) rotate(-3.5deg) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(-3.5deg) scale(1.3);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-3.5deg) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes tree-exit-left {
+    to {
+        transform: translateX(-150%);
+    }
+}
+
+@keyframes tree-exit-right {
+    to {
+        transform: translateX(150%);
+    }
+}
+
+@keyframes tree-exit-down {
+    to {
+        transform: translateY(150%);
+    }
+}
+@keyframes wish-well-enter {
+    from {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wish-rock-enter {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wish-coin-drop {
+    from {
+        transform: translateY(-300%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wish-mushroom-enter {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wish-mushroom-middle-enter {
+    from {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wish-fairy-sign-enter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes wish-coin-exit {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+}
+
 .animate-left {
     animation: exit-left 2s ease forwards;
 }
@@ -178,4 +288,289 @@
 
 .animate-fade {
     animation: fade-out 2s ease forwards;
+}
+
+.sign-animate-in {
+    animation: sign-enter 1.5s ease-out forwards;
+}
+
+.bubble-pop {
+    animation: bubble-pop 0.4s ease-out forwards;
+}
+
+.tree-animate-left {
+    animation: tree-exit-left 1.5s ease-in forwards;
+}
+
+.tree-animate-right {
+    animation: tree-exit-right 1.5s ease-in forwards;
+}
+
+.tree-animate-down {
+    animation: tree-exit-down 1.5s ease-in forwards;
+}
+
+.trees-exit .tree-topleft {
+    animation: tree-exit-left 1.5s ease-in forwards;
+    animation-delay: 0s;
+}
+
+.trees-exit .tree-topright {
+    animation: tree-exit-right 1.5s ease-in forwards;
+    animation-delay: 0.2s;
+}
+
+.trees-exit .tree-midcenter {
+    animation: fade-out 1.5s ease-in forwards;
+    animation-delay: 0.4s;
+}
+
+.trees-exit .tree-btmleft {
+    animation: tree-exit-left 1.5s ease-in forwards;
+    animation-delay: 0.6s;
+}
+
+.trees-exit .tree-btmright {
+    animation: tree-exit-right 1.5s ease-in forwards;
+    animation-delay: 0.8s;
+}
+
+.trees-exit .sign-container {
+    animation: tree-exit-down 1.5s ease-in forwards;
+    animation-delay: 1s;
+}
+
+.trees-exit .tree-btmcenter {
+    animation: tree-exit-down 1.5s ease-in forwards;
+    animation-delay: 1.2s;
+}
+
+/* Wish assets entrance animations triggered by .wish-assets-enter */
+
+.wish-assets-enter .wish-well {
+    animation: wish-well-enter 1s ease-out forwards;
+    animation-delay: 0s;
+}
+
+.wish-assets-enter .wish-rock {
+    animation: wish-rock-enter 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.wish-assets-enter .mushroom-left {
+    animation: wish-mushroom-enter 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.wish-assets-enter .mushroom-middle {
+    animation: wish-mushroom-middle-enter 1s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+.wish-assets-enter .mushroom-right {
+    animation: wish-mushroom-enter 1s ease-out forwards;
+    animation-delay: 1.4s;
+}
+
+.wish-assets-enter .fairy-sign-container {
+    animation: wish-fairy-sign-enter 1s ease-out forwards;
+    animation-delay: 1.6s;
+}
+
+.wish-assets-enter .wish-coin {
+    animation: wish-coin-drop 0.8s ease-in forwards;
+    animation-delay: 2s;
+}
+
+.wish-assets .coin-exit {
+    animation: wish-coin-exit 1s ease-in forwards;
+}
+
+.wish-assets .coin-return {
+    animation: wish-coin-drop 0.8s ease-out forwards;
+}
+
+/* ===== PERMISSION SCREEN ===== */
+
+#permission-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+}
+
+.permission-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.tree {
+    position: absolute;
+    pointer-events: none;
+}
+
+.tree-topleft {
+    top: 0;
+    left: 0;
+    width: 77%;
+    z-index: 2;
+}
+
+.tree-topright {
+    top: 0;
+    right: -40%; 
+    width: 100%;
+    z-index: 2;
+}
+
+.tree-midcenter {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%); /* centers element when using left: 50% */
+    width: 110%;
+    z-index: 2;
+}
+
+.tree-btmleft {
+    bottom: 0; 
+    left: auto;
+    width: 150%;
+    z-index: 2;
+}
+.tree-btmright {
+    bottom: auto%;
+    right: -90%;
+    width: 150%;
+    z-index: 2;
+}
+
+.tree-btmcenter {
+    bottom: -14%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 5; /* IMPORTANT: higher than sign (z-index: 4) so it overlaps signs base */
+}
+
+.sign-container {
+    position: absolute;
+    bottom: -100%; /* starts off-screen below viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.bubble-btn {
+    position: absolute;
+    top: 45%;
+    left: 53%;
+    transform: translate(-50%, -50%) rotate(-3.5deg); /* negative = tilts left, positive = tilts right */
+    font-family: "Rubik Bubbles", system-ui;
+    font-size: 2rem;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease; /* smooth hover */
+}
+
+.bubble-btn:hover {
+    transform: translate(-50%, -50%) rotate(-3.5deg) scale(1.1);
+    background: rgba(255, 255, 255, 1);
+}
+
+.permission-sign {
+    width: 650px; /* adjust with developer tools */
+}
+
+/* ===== WISH ASSETS (inside permission screen) ===== */
+
+.wish-assets {
+    display: none; /* hidden until trees exit */
+}
+
+.wish-assets img {
+    position: absolute;
+}
+
+/* All wish assets start invisible except coin always visible */
+.wish-assets .wish-well,
+.wish-assets .wish-rock,
+.wish-assets .wish-coin,
+.wish-assets .fairy-sign-container,
+.wish-assets .mushroom {
+    opacity: 0;
+}
+
+.wish-well {
+    bottom: 16%;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 90%; /* adjust with DevTools */
+    z-index: 2;
+}
+
+.wish-rock {
+    bottom: 8%;
+    left: -5%;
+    width: 50%;
+    z-index: 3;
+}
+
+.wish-coin {
+    bottom: 22%;
+    left: 15%;
+    width: 17%;
+    z-index: 4; /* above rock */
+    cursor: pointer;
+}
+
+.fairy-sign-container {
+    position: absolute;
+    right: -9%;
+    bottom: 70%;
+    width: 70%;
+    z-index: 3;
+}
+
+.fairy-sign {
+    width: 100%;
+}
+
+.mushroom {
+    position: absolute;
+    bottom: -2%;
+    z-index: 5; /* foreground, in front of everything */
+}
+
+.mushroom-left {
+    left: 0;
+    width: 30%;
+}
+
+.mushroom-middle {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+}
+
+.mushroom-right {
+    right: 0;
+    width: 20%;
+}
+
+.wish-coin {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.wish-coin:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
 }

@@ -1,6 +1,7 @@
 //Screen Variables//
 const landingScreen = document.getElementById("landing-screen");
 const permissionScreen = document.getElementById("permission-screen");
+const listeningScreen = document.getElementById("listening-screen");
 
 //Button Variables//
 const enterBtn = document.getElementById("enter-btn-img");
@@ -214,6 +215,9 @@ coinBtn.style.filter = "none";
 
 //play coin splash sound
 playCoinSplash();
+//hide permission screen and show listening screen
+permissionScreen.style.display = "none";
+listeningScreen.style.display = "block";
         mic.close(); 
         
         //send recorded audio to server//
@@ -231,6 +235,14 @@ await playMyWish(recordedBlob);
 setTimeout(async () => {
   await playAllWishes();
 }, 2000);
+
+//wait for all audio to finish (about 8 seconds total) then prompt user
+setTimeout(() => {
+  const makeAnother = confirm("Would you like to make another wish?");
+  if (makeAnother) {
+    location.reload(); // refreshes the page to start over
+  }
+}, 10000);
 
 // COME BAKC TO THIS? COIN ANIMATION ?//bring coin back after audio finishes (about 8 seconds total)
 // setTimeout(async function() {

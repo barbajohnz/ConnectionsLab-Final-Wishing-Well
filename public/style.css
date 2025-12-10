@@ -14,6 +14,8 @@
     pointer-events: none;
 }
 
+/* DESKTOP STYLES (1920x1080) - Base */
+
 .cloud-topleft {
     top: -15%;
     left: -20%;
@@ -39,14 +41,14 @@
 }
 
 .cloud-btmleft {
-    bottom: -25%;
+    bottom: -32%;
     left: -20%;
-    width: 120%;
+    width: 100%;
 }
 
 .cloud-btmright {
-    bottom: -1%;
-    right: 0;
+    bottom: -19%;
+    right: -14%;
     width: 80%;
 }
 
@@ -73,7 +75,7 @@
 
 .wishing-well-btn {
     position: absolute;
-    bottom: 40%;
+    bottom: 35%;
     left: 60%;
     transform: translateX(-50%);
     width: 30%;
@@ -106,11 +108,11 @@
 .title-welcome {
     font-family: "Rubik Bubbles", system-ui;
     position: absolute;
-    top: -15%;
+    top: -24%;
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 15rem;
+    font-size: 19rem;
     z-index: 10;
 }
 
@@ -195,6 +197,7 @@
         transform: translateY(150%);
     }
 }
+
 @keyframes wish-well-enter {
     from {
         transform: translateX(-50%) translateY(100%);
@@ -418,7 +421,7 @@
 .tree-topleft {
     top: 0;
     left: 0;
-    width: 77%;
+    width: 37%;
     z-index: 2;
 }
 
@@ -430,7 +433,7 @@
 }
 
 .tree-midcenter {
-    top: 30%;
+    top: 9%;
     left: 50%;
     transform: translateX(-50%); /* centers element when using left: 50% */
     width: 110%;
@@ -440,9 +443,10 @@
 .tree-btmleft {
     bottom: 0; 
     left: auto;
-    width: 150%;
+    width: 100%;
     z-index: 2;
 }
+
 .tree-btmright {
     bottom: auto%;
     right: -90%;
@@ -451,7 +455,7 @@
 }
 
 .tree-btmcenter {
-    bottom: -14%;
+    bottom: -33%;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -511,15 +515,15 @@
 
 .wish-well {
     bottom: 16%;
-    left: 40%;
+    left: 45%;
     transform: translateX(-50%);
-    width: 90%; /* adjust with DevTools */
+    width: 68%; /* adjust with DevTools */
     z-index: 2;
 }
 
 .wish-rock {
-    bottom: 8%;
-    left: -5%;
+    bottom: -3%;
+    left: 5%;
     width: 50%;
     z-index: 3;
 }
@@ -534,9 +538,9 @@
 
 .fairy-sign-container {
     position: absolute;
-    right: -9%;
-    bottom: 70%;
-    width: 70%;
+    right: -11%;
+    bottom: 84%;
+    width: 65%;
     z-index: 3;
 }
 
@@ -551,19 +555,19 @@
 }
 
 .mushroom-left {
-    left: 0;
-    width: 30%;
+    left: -4%;
+    width: 25%;
 }
 
 .mushroom-middle {
     left: 50%;
     transform: translateX(-50%);
-    width: 45%;
+    width: 35%;
 }
 
 .mushroom-right {
-    right: 0;
-    width: 20%;
+    right: -9%;
+    width: 24%;
 }
 
 .wish-coin {
@@ -598,8 +602,8 @@
 
 .ripple-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 79%;
+    left: 52%;
     transform: translate(-50%, -50%);
     width: 300px;
     height: 300px;
@@ -647,4 +651,215 @@
 .ripple-3 {
     animation: ripple-grow 3s ease-out infinite;
     animation-delay: 2s;
+}
+
+/* ===== TABLET STYLES (768px - 1024px) ===== */
+
+@media (max-width: 1024px) {
+    /* LANDING SCREEN - TABLET */
+    .title-welcome {
+        top: -5%;
+        font-size: 10rem;
+    }
+
+    .cloud-topleft {
+        top: -12%;
+        left: -30%;
+        width: 100%;
+    }
+
+    .cloud-midleft {
+        top: 15%;
+        left: -29%;
+        width: 125%;
+    }
+
+    .cloud-btmleft {
+        bottom: -20%;
+        left: -40%;
+        width: 150%;
+    }
+
+    .cloud-btmright {
+        bottom: -5%;
+        right: -15%;
+        width: 95%;
+    }
+
+    .cloud-midbtm {
+        bottom: 5%;
+        width: 150%;
+    }
+
+    .cloud-moon {
+        width: 105%;
+    }
+
+    .wishing-well-btn {
+        bottom: 38%;
+        left: 65%;
+        width: 45%;
+    }
+
+    /* PERMISSION SCREEN - TABLET */
+    .tree-topleft {
+        width: 87%;
+    }
+
+    .tree-midcenter {
+        top: 40%;
+        width: 120%;
+    }
+
+    .tree-btmleft {
+        width: 200%;
+    }
+
+    .tree-btmright {
+        bottom: -2%;
+        right: -43%;
+        width: 120%;
+    }
+
+    .tree-btmcenter {
+        bottom: -11%;
+        width: 106%;
+    }
+
+    /* WISH SCREEN - TABLET */
+    .wish-well {
+        left: 50%;
+        width: 120%;
+    }
+
+    .wish-rock {
+        bottom: 12%;
+        left: 13%;
+    }
+
+    .fairy-sign-container {
+        right: -30%;
+        bottom: 70%;
+        width: 90%;
+    }
+
+    /* LISTENING SCREEN - TABLET */
+    .ripple-container {
+        top: 72%;
+        left: 54%;
+    }
+}
+
+/* ===== MOBILE STYLES (under 768px) ===== */
+
+@media (max-width: 768px) {
+    /* LANDING SCREEN - MOBILE */
+    .title-welcome {
+        top: -2%;
+        font-size: 5rem;
+    }
+
+    .cloud-topleft {
+        top: -8%;
+        left: -20%;
+        width: 130%;
+    }
+
+    .cloud-topright {
+        top: -7%;
+        right: -25%;
+        width: 70%;
+    }
+
+    .cloud-topcenter {
+        top: -11%;
+        width: 120%;
+    }
+
+    .cloud-midbtm {
+        bottom: -10%;
+        width: 180%;
+    }
+
+    .cloud-moon {
+        width: 109%;
+    }
+
+    .wishing-well-btn {
+        bottom: 40%;
+        left: 65%;
+        width: 50%;
+    }
+
+    .cloud-btmright {
+        bottom: 2%;
+        width: 190%;
+    }
+
+    .cloud-btmleft {
+        bottom: -24%;
+        left: -90%;
+        width: 520%;
+    }
+
+    /* PERMISSION SCREEN - MOBILE */
+    .permission-sign {
+        width: 550px;
+    }
+
+    .tree-btmcenter {
+        bottom: -8%;
+        width: 150%;
+    }
+
+    .tree-btmleft {
+        width: 350%;
+    }
+
+    .tree-topleft {
+        width: 110%;
+    }
+
+    .tree-topright {
+        right: -80%;
+        width: 200%;
+    }
+
+    .tree-midcenter {
+        top: 30%;
+        width: 260%;
+    }
+
+    /* WISH SCREEN - MOBILE */
+    .fairy-sign-container {
+        right: -9%;
+        bottom: 109%;
+        width: 120%;
+    }
+
+    .wish-well {
+        width: 140%;
+    }
+
+    .wish-rock {
+        bottom: 8%;
+        left: 4%;
+        width: 74%;
+    }
+
+    .wish-coin {
+        bottom: 21%;
+        left: 25%;
+        width: 22%;
+    }
+
+    .mushroom {
+        bottom: -1%;
+    }
+
+    /* LISTENING SCREEN - MOBILE */
+    .ripple-container {
+        top: 72%;
+        left: 52%;
+    }
 }

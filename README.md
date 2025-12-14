@@ -211,7 +211,7 @@ Browsers block autoplay without user interaction. Solution: All audio functional
 ## Credits
 
 **Developed by:** Alexandros Barbayianis  
-**Course:** NYU ITP/IMA Connections Lab (Fall 2025)  
+**Course:** NYU IMA Low Res Connections Lab (Fall 2025)  
 **Assets:** Adobe Stock (forest elements, well, clouds)  
 **Sound Effects:** Adobe Sound Library (coin drop, water splash)  
 **Fonts:** Google Fonts (Rubik Bubbles, Fredericka the Great)
